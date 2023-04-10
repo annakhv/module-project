@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1596468-c85b-4aea-9991-54a9501f3de7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/org/app/NoImplementationFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/org/app/NoSubscriptionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/application/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/org/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmp-cloud-bank-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-cloud-bank-impl/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmp-cloud-bank-impl/src/main/java/org/cloud/impl/CloudBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-cloud-bank-impl/src/main/java/org/cloud/impl/CloudBank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jmp-cloud-service-imp/src/main/java/org/serv/impl/ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-cloud-service-imp/src/main/java/org/serv/impl/ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmp-cloud-service-imp/target/classes/org/serv/impl/ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-cloud-service-imp/target/classes/org/serv/impl/ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmp-service-api/src/main/java/org/service/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-service-api/src/main/java/org/service/service/Service.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>

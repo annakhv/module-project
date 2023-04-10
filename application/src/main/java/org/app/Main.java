@@ -13,22 +13,47 @@ import org.service.service.Service;
 public class Main {
     public static void main(String[] args) {
 
-        var userAna = new User("Anna", "Smith", LocalDate.of(1999, Month.APRIL, 12));
-        var bankImpl = ServiceLoader.load(Bank.class)
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException());
+        var userAna = new User("Anna", "Smith", LocalDate.of(1995, Month.JULY, 12));
+        var userGiorgi = new User("Giorgi", "Scholz", LocalDate.of(2000, Month.JANUARY, 12));
+        var bankImpl = loadBank();
         var creditCard = bankImpl.createBankCard(userAna, BankCardType.CREDIT);
         var debitCard = bankImpl.createBankCard(userAna, BankCardType.DEBIT);
-        var serviceImpl = ServiceLoader.load(Service.class)
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException());
+        var debitCardGiorgi = bankImpl.createBankCard(userGiorgi, BankCardType.DEBIT);
+        var serviceImpl = loadService();
         serviceImpl.subscribe(creditCard);
         serviceImpl.subscribe(debitCard);
-        var subscription = serviceImpl.getSubscriptionByBankCardNumber(creditCard.getNumber());
+        serviceImpl.subscribe(debitCardGiorgi);
+        var subscription = serviceImpl.getSubscriptionByBankCardNumber(creditCard.getNumber())
+                .orElseThrow(()->new NoSubscriptionException("no subscription for bank card number: "+creditCard.getNumber()));
         System.out.println(subscription);
-        var subscription2 = serviceImpl.getSubscriptionByBankCardNumber(debitCard.getNumber());
+        var subscription2 = serviceImpl.getSubscriptionByBankCardNumber(debitCard.getNumber())
+                .orElseThrow(()->new NoSubscriptionException("no subscription for bank card number: "+debitCard.getNumber()));
         System.out.println(subscription2);
+        var subscription3=serviceImpl.getSubscriptionByBankCardNumber(debitCardGiorgi.getNumber())
+                .orElseThrow(()->new NoSubscriptionException("no subscription for bank card number: "+debitCard.getNumber()));
+        System.out.println(subscription3);
         List<User> users = serviceImpl.getAllUsers();
-        System.out.println(users);
+        System.out.println("users are "+users);
+        var averegeAge=serviceImpl.getAverageUsersAge();
+        System.out.println("averege users age is "+ averegeAge);
+        var subsByCondition=serviceImpl.getAllSubscriptionsByCondition(subs->subs.getStartDate().isAfter(LocalDate.now().minusDays(1)));
+        System.out.println("subscription by condition that it is subscribed after yesterday is "+subsByCondition);
+        var isPayable=Service.isPayableUser(userAna);
+        System.out.println("is ana payable user "+isPayable);
+        var userTom= new User("Tom", "Connor", LocalDate.of(2015, Month.JANUARY, 12));
+        var isTomPayable=Service.isPayableUser(userTom);
+        System.out.println("is tom payable user "+isTomPayable);
+    }
+
+    private static Bank loadBank() {
+        return ServiceLoader.load(Bank.class)
+                .findFirst()
+                .orElseThrow(() -> new NoImplementationFoundException("no implementation found for interface(abstract class) :" + Bank.class));
+    }
+
+    private static Service loadService() {
+        return ServiceLoader.load(Service.class)
+                .findFirst()
+                .orElseThrow(() -> new NoImplementationFoundException("no implementation found for interface(abstract class) :" + Service.class));
     }
 }
