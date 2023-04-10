@@ -15,7 +15,7 @@ import org.service.service.Service;
 
 public class ServiceImpl implements Service {
 
-    private static Map<Subscription, User> subscriptionMap = new HashMap<>();
+    private  Map<Subscription, User> subscriptionMap = new HashMap<>();
 
     @Override
     public void subscribe(final BankCard card) {

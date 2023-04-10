@@ -29,7 +29,7 @@ public class CloudBank implements Bank {
     @Override
     public BankCard createBankCard(final User user, final BankCardType type) {
         var cardNumber = generateNumber();
-        var bankCard = bankCards.get(type).apply(cardNumber,user);
+        var bankCard = bankCards.getOrDefault(type, DebitBankCard::new).apply(cardNumber, user);
         storage.put(bankCard.getNumber(), user);
         return bankCard;
     }

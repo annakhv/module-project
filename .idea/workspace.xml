@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1596468-c85b-4aea-9991-54a9501f3de7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26f941f8e87ec02b466ee256e8d0b6c047d7e0e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/application/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/org/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banking-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/banking-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jmp-cloud-bank-impl/src/main/java/org/cloud/impl/CloudBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-cloud-bank-impl/src/main/java/org/cloud/impl/CloudBank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jmp-cloud-service-imp/src/main/java/org/serv/impl/ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-cloud-service-imp/src/main/java/org/serv/impl/ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmp-dto/src/main/java/org/dto/dto/BankCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/jmp-dto/src/main/java/org/dto/dto/BankCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

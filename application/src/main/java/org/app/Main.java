@@ -7,6 +7,7 @@ import java.util.ServiceLoader;
 
 import org.bank.api.Bank;
 import org.dto.dto.BankCardType;
+import org.dto.dto.CreditBankCard;
 import org.dto.dto.User;
 import org.service.service.Service;
 
@@ -19,8 +20,10 @@ public class Main {
         var bankImpl = loadBank();
         var creditCard = bankImpl.createBankCard(userAna, BankCardType.CREDIT);
         System.out.println(creditCard);
+        System.out.println(creditCard + " is this card creditcard ? "+ creditCard.isCreditCard());
         var debitCard = bankImpl.createBankCard(userAna, BankCardType.DEBIT);
         System.out.println(debitCard);
+        System.out.println(debitCard + " is this card debitcard ? "+ debitCard.isDebitCard());
         var creditCardTom=bankImpl.createBankCard(userTom,BankCardType.CREDIT);
         System.out.println(creditCardTom);
         var debitCardGiorgi = bankImpl.createBankCard(userGiorgi, BankCardType.DEBIT);
@@ -47,8 +50,8 @@ public class Main {
         System.out.println("users are "+users);
         var averegeAge=serviceImpl.getAverageUsersAge();
         System.out.println("averege users age is "+ averegeAge);
-        var subsByCondition=serviceImpl.getAllSubscriptionsByCondition(subs->subs.getStartDate().isAfter(LocalDate.now().minusDays(1)));
-        System.out.println("subscription by condition that it is subscribed after yesterday is "+subsByCondition);
+        var subsByCondition=serviceImpl.getAllSubscriptionsByCondition(subs->subs.getStartDate().isAfter(LocalDate.now().minusDays(2)));
+        System.out.println("subscription by condition that card is subscribed after 2 days ago "+subsByCondition);
         var isPayable=Service.isPayableUser(userAna);
         System.out.println("is ana payable user "+isPayable);
         var isTomPayable=Service.isPayableUser(userTom);
