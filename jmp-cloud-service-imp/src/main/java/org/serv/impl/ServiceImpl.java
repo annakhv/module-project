@@ -13,17 +13,17 @@ import org.service.service.Service;
 
 public class ServiceImpl implements Service {
 
-    private static Map<User, Subscription> subscriptionMap = new HashMap<>();
+    private static Map< Subscription, User> subscriptionMap = new HashMap<>();
 
     @Override
     public void subscribe(final BankCard card) {
         var subscription = new Subscription(card.getNumber(), LocalDate.now());
-        subscriptionMap.put(card.getUser(), subscription);
+        subscriptionMap.put( subscription,card.getUser());
     }
 
     @Override
     public Optional<Subscription> getSubscriptionByBankCardNumber(final String cardNumber) {
-        return subscriptionMap.values()
+        return subscriptionMap.keySet()
                 .stream()
                 .filter(subs -> subs.getBankCard().equals(cardNumber))
                 .findAny();
@@ -31,6 +31,6 @@ public class ServiceImpl implements Service {
 
     @Override
     public List<User> getAllUsers() {
-        return subscriptionMap.keySet().stream().distinct().toList();
+        return subscriptionMap.values().stream().distinct().toList();
     }
 }
