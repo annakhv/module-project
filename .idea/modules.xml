@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/application/application.iml" filepath="$PROJECT_DIR$/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banking-project.iml" filepath="$PROJECT_DIR$/banking-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jmp-bank-api/jmp-bank-api.iml" filepath="$PROJECT_DIR$/jmp-bank-api/jmp-bank-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jmp-cloud-bank-impl/jmp-cloud-bank-impl.iml" filepath="$PROJECT_DIR$/jmp-cloud-bank-impl/jmp-cloud-bank-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jmp-cloud-service-imp/jmp-cloud-service-imp.iml" filepath="$PROJECT_DIR$/jmp-cloud-service-imp/jmp-cloud-service-imp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jmp-dto/jmp-dto.iml" filepath="$PROJECT_DIR$/jmp-dto/jmp-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jmp-service-api/jmp-service-api.iml" filepath="$PROJECT_DIR$/jmp-service-api/jmp-service-api.iml" />
+    </modules>
+  </component>
+</project>
